@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+:root {
+    --pink: #b61e6d;
+    --light-pink: #fce4ec;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--pink);
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 25px;
+    color: white;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+}
+
+header p {
+    color: #ffe3ef;
+    font-size: 1rem;
+}
+
+.note-form {
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 25px;
+    font-family: Segoe UI;
+}
+
+.note-form input,
+.note-form textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    resize: none;
+}
+
+.note-form button {
+    background-color: var(--pink);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease-in;
+    width: 100%;
+}
+
+.note-form button:hover {
+    background-color: #8e1755;
+}
+
+.notes {
+    width: 100%;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.note {
+    background: var(--white);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+}
+
+.note:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.note h3 {
+    color: var(--pink);
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+}
+
+.note p {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.note small {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.delete-btn {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: background 0.2s ease-in;
+}
+
+.delete-btn:hover {
+    background-color: #b71c1c;
+}
+
+footer {
+    margin-top: 40px;
+    color: #ffe3ef;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* 🔸 Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    .note-form {
+        padding: 15px;
+    }
+
+    .note-form input,
+    .note-form textarea {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .note-form button {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .note h3 {
+        font-size: 1rem;
+    }
+}
